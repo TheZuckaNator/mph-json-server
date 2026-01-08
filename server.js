@@ -22,6 +22,16 @@ server.use((req, res, next) => {
   next()
 })
 
+// Add before server.use(router)
+server.post('/reset', (req, res) => {
+  const db = router.db
+  db.set('listings', []).write()
+  db.set('studiochain_listings', []).write()
+  db.set('signatures', []).write()
+  db.set('transactions', []).write()
+  res.json({ message: 'Database reset' })
+})
+
 server.use(router)
 
 const PORT = process.env.PORT || 3001
