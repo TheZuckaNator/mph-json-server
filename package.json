@@ -1,0 +1,17 @@
+{
+  "name": "mph-json-server",
+  "version": "1.0.0",
+  "description": "JSON Server backend for MPH NFT Marketplace",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "json-server": "^0.17.4",
+    "cors": "^2.8.5"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
